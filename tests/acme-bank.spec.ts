@@ -26,6 +26,8 @@ test.describe('ACME Bank', () => {
     let eyes: Eyes;
     test.beforeEach(async ({ page }) => {
         eyes = new Eyes(Runner, Config);
+        eyes.setParentBranchName('main')
+        eyes.setBranchName('new-feature')
 
         // Start Applitools Visual AI Test
         // Args: Playwright Page, App Name, Test Name, Viewport Size for local driver
