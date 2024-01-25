@@ -43,9 +43,9 @@ test.describe('ACME Bank', () => {
         await page.locator('id=log-in').click();
         await page.locator('css=.dashboardNav_navContainer__kA4wD').waitFor({state: 'attached'});
 
-        await page.evaluate(() => {
-          document.querySelector("table > tbody > tr:nth-child(1) > td:nth-child(3)").remove()
-        })
+//        await page.evaluate(() => {
+//          document.querySelector("table > tbody > tr:nth-child(1) > td:nth-child(3)").remove()
+//        })
         // Full Page - Visual AI Assertion
         await eyes.check('Main page', Target.window().fully()
             // Uncomment to apply Layout regions and have test pass
